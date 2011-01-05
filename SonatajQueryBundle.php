@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Bundle\jQueryBundle;
+namespace Bundle\Sonata\jQueryBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class jQueryBundle extends Bundle {
+class SonatajQueryBundle extends Bundle {
 
 }
