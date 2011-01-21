@@ -8,10 +8,26 @@
  * file that was distributed with this source code.
  */
 
-namespace Bundle\Sonata\jQueryBundle;
+namespace Sonata\jQueryBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SonatajQueryBundle extends Bundle {
+class SonatajQueryBundle extends Bundle
+{
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getNamespace()
+    {
+        return __NAMESPACE__;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPath()
+    {
+        return strtr(__DIR__, '\\', '/');
+    }
 }
