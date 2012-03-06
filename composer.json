@@ -1,9 +1,9 @@
 {
-    "name": "sonata/jquery-bundle",
+    "name": "sonata-project/jquery-bundle",
     "type": "symfony-bundle",
     "description": "Symfony SonatajQueryBundle",
     "keywords": ["jQuery", "sonata"],
-    "homepage": "http://sonata-project.org/",
+    "homepage": "http://sonata-project.org/bundles/jquery",
     "license": "MIT",
     "authors": [
         {
