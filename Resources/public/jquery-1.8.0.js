@@ -2318,7 +2318,8 @@ jQuery.extend({
 			return ret;
 
 		} else {
-			// In IE9+, Flash objects don't have .getAttribute (#12945)
+			// In IE9+, Flash objects don't have .getAttribute (http://bugs.jquery.com/ticket/12945)
+			// https://github.com/jquery/jquery/pull/1184
 			// Support: IE9+
 			if (( typeof elem.getAttribute !== "undefined" ) && ( elem.getAttribute !== null )){
 				ret = elem.getAttribute( name );
