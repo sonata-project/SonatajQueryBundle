@@ -1718,7 +1718,7 @@ jQuery.extend({
 		var noData = elem.nodeName && jQuery.noData[ elem.nodeName.toLowerCase() ];
 
 		// nodes accept data unless otherwise specified; rejection can be conditional
-		return !noData || noData !== true && elem.getAttribute("classid") === noData;
+		return !noData || ((noData !== true) && ((typeof elem.getAttribute !== "undefined") && (elem.getAttribute !== null) && (elem.getAttribute("classid") === noData)));
 	}
 });
 
@@ -2318,8 +2318,12 @@ jQuery.extend({
 			return ret;
 
 		} else {
-
-			ret = elem.getAttribute( name );
+			// In IE9+, Flash objects don't have .getAttribute (http://bugs.jquery.com/ticket/12945)
+			// https://github.com/jquery/jquery/pull/1184
+			// Support: IE9+
+			if (( typeof elem.getAttribute !== "undefined" ) && ( elem.getAttribute !== null )){
+				ret = elem.getAttribute( name );
+			}
 
 			// Non-existent attributes return null, we normalize to undefined
 			return ret === null ?
