@@ -1718,7 +1718,7 @@ jQuery.extend({
 		var noData = elem.nodeName && jQuery.noData[ elem.nodeName.toLowerCase() ];
 
 		// nodes accept data unless otherwise specified; rejection can be conditional
-		return !noData || noData !== true && elem.getAttribute("classid") === noData;
+		return !noData || ((noData !== true) && ((typeof elem.getAttribute !== "undefined") && (elem.getAttribute !== null) && (elem.getAttribute("classid") === noData)));
 	}
 });
 
