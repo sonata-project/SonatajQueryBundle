@@ -10,3 +10,7 @@ Documentation can be found on [Resources/doc](https://github.com/sonata-project/
 * [Sonata Users](https://groups.google.com/group/sonata-users): Only for user questions
 * [Sonata Devs](https://groups.google.com/group/sonata-devs): Only for devs
 
+License
+-------
+
+This bundle is available under the [MIT license](Resources/meta/LICENSE).
